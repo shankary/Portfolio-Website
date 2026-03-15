@@ -47,6 +47,8 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+max-width:1100px;
+margin:auto;
 
 }
 
@@ -63,6 +65,7 @@ nav a{
 text-decoration:none;
 color:#64ffda;
 font-weight:500;
+transition:0.3s;
 
 }
 
@@ -94,6 +97,12 @@ text-decoration:none;
 .social a:hover{
 
 color:#64ffda;
+
+}
+
+.social i{
+
+font-size:22px;
 
 }
 
@@ -144,6 +153,14 @@ transition:0.3s;
 
 transform:translateY(-5px);
 background:#1a2f50;
+
+}
+
+.project-card a{
+
+color:#64ffda;
+text-decoration:none;
+font-size:14px;
 
 }
 
