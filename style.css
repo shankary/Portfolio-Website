@@ -105,6 +105,7 @@ body {
 
   display: flex;
   justify-content: center;
+  align-items: center;
 
 }
 
@@ -113,14 +114,19 @@ body {
   width: 100%;
   max-width: 420px;
 
-  border-radius: 20px;
-
   object-fit: cover;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  /* removes card look */
+  background: transparent;
+  box-shadow: none;
+
+  /* soft blended edges */
+  mix-blend-mode: multiply;
+
+  /* organic shape instead of rectangle */
+  border-radius: 50% 50% 45% 55% / 55% 45% 55% 45%;
 
 }
-
 /* RIGHT CONTENT */
 
 .role {
