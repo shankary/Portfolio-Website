@@ -1,299 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Shankary Devi Natarajan | Technical Analyst & Learning Experience Designer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<style>
-:root {
-  --bg: #f3f4f6;           /* light grey background */
-  --panel: #ffffff;       /* white cards */
-  --text: #1f2937;
-  --muted: #4b5563;
-  --accent: #b76e79;      /* soft feminine rose tone */
-  --border: #e5e7eb;
-}
+  <title>
+    Shankary Devi Natarajan | Technology & Data Analyst
+  </title>
 
-/* RESET */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
-body {
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
-
-/* TOP BAR */
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: var(--panel);
-  padding: 18px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--border);
-}
-
-.welcome {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.topbar-right {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.top-button {
-  background: #111;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 999px;
-  font-size: 14px;
-  text-decoration: none;
-  transition: 0.2s ease;
-}
-
-.top-button.secondary {
-  background: transparent;
-  color: #111;
-  border: 1px solid #111;
-}
-
-.top-button:hover {
-  transform: scale(1.03);
-}
-
-/* MAIN LAYOUT */
-.main {
-  display: grid;
-  grid-template-columns: 360px 1fr;
-  min-height: 100vh;
-}
-
-/* LEFT */
-.left {
-  padding: 30px;
-  border-right: 1px solid var(--border);
-}
-
-.sidebar-card {
-  background: var(--panel);
-  border-radius: 16px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
-}
-
-.left img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.left h1 {
-  font-size: 22px;
-  margin-top: 10px;
-}
-
-.left p {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.personality {
-  text-align: center;
-  font-style: italic;
-  margin-top: 20px;
-  color: var(--muted);
-}
-
-/* RIGHT */
-.right {
-  padding: 40px 60px;
-}
-
-.card {
-  background: var(--panel);
-  border-radius: 18px;
-  padding: 28px;
-  margin-bottom: 25px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
-}
-
-h2 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.section-line {
-  width: 50px;
-  height: 3px;
-  background: #111;
-  margin-bottom: 18px;
-  border-radius: 4px;
-}
-
-.project {
-  border-left: 3px solid #111;
-  padding-left: 14px;
-  margin-bottom: 14px;
-}
-
-.project strong {
-  display: block;
-  font-size: 15px;
-}
-
-.project span {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.button {
-  display: inline-block;
-  margin-top: 15px;
-  background: #111;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 999px;
-  text-decoration: none;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .main { grid-template-columns: 1fr; }
-  .right { padding: 25px; }
-  .left { border-right: none; border-bottom: 1px solid var(--border); }
-}
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="topbar">
-  <span class="welcome">Hi, welcome to my portfolio</span>
+  <!-- NAVBAR -->
+  <header class="navbar">
 
-  <nav class="topbar-right">
-    <a href="ppt.html" class="top-button secondary">Projects</a>
-    <a href="data/Geetu_Resume_LD.pdf" class="top-button" target="_blank">Resume</a>
-  </nav>
-</header>
-
-<div class="main">
-
-  <!-- LEFT -->
-  <aside class="left">
-
-    <div class="sidebar-card">
-      <img src="Firefly_picture resolution to be upgraded as face in picture is not clear and light to be eve 190264.png" alt="Profile Photo">
-      <h1>Shankary Devi Natarajan</h1>
-      <p>Technical Analyst | Learning Experience Designer | Data & Automation Specialist</p>
+    <div class="logo">
+      Shankary Devi Natarajan
     </div>
 
-    <div class="sidebar-card">
-      <p>
-        5+ years of experience supporting enterprise .NET applications, SaaS platforms, and COTS systems.
-        Skilled in incident resolution, SQL analysis, automation, and technical documentation across large-scale environments.
-      </p>
+    <nav class="nav-links">
+      <a href="ppt.html">Projects</a>
+
+      <a href="data/Geetu_Resume_LD.pdf" target="_blank">
+        Resume
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+    </nav>
+
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+
+    <!-- LEFT IMAGE -->
+    <div class="hero-image">
+
+      <img
+        src="Firefly_picture resolution to be upgraded as face in picture is not clear and light to be eve 190264.png"
+        alt="Shankary Profile Photo"
+      />
+
     </div>
 
-  </aside>
+    <!-- RIGHT CONTENT -->
+    <div class="hero-content">
 
-  <!-- RIGHT -->
-  <main class="right">
-
-    <!-- SUMMARY -->
-    <div class="card">
-      <h2>Professional Summary</h2>
-      <div class="section-line"></div>
-      <p>
-        Experienced in supporting enterprise applications serving 1,000+ users, resolving 50+ monthly incidents,
-        and improving system reliability through RCA, SQL analysis, and production debugging.
-      </p>
-      <br>
-      <p>
-        Strong background in IT operations, automation, and reporting with exposure to Python, SQL, ServiceNow,
-        and enterprise monitoring tools.
-      </p>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div class="card">
-      <h2>Experience</h2>
-      <div class="section-line"></div>
-
-      <div class="project">
-        <strong>Technology Analyst – Infosys (2017–2023)</strong>
-        <span>Supported .NET enterprise applications, performed SQL reporting, managed production incidents, and led application upgrades and migrations.</span>
-      </div>
-
-      <div class="project">
-        <strong>Incident & Problem Management</strong>
-        <span>Resolved recurring production issues using logs, SQL validation, and debugging techniques (DLL analysis).</span>
-      </div>
-
-      <div class="project">
-        <strong>Operations & Compliance</strong>
-        <span>Managed ServiceNow change requests, security updates, audits, and IT controls ensuring compliance and system stability.</span>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="card">
-      <h2>Skills</h2>
-      <div class="section-line"></div>
-
-      <div class="project">
-        <strong>Languages</strong>
-        <span>SQL, Python, C#, HTML, CSS</span>
-      </div>
-
-      <div class="project">
-        <strong>Tools</strong>
-        <span>ServiceNow, Dynatrace, Visual Studio, SSMS, Jupyter Notebook</span>
-      </div>
-
-      <div class="project">
-        <strong>Frameworks</strong>
-        <span>ITIL, Agile, Scrum, Kanban</span>
-      </div>
-    </div>
-
-    <!-- EDUCATION -->
-    <div class="card">
-      <h2>Education</h2>
-      <div class="section-line"></div>
-
-      <div class="project">
-        <strong>Master of Computer Applications (2023)</strong>
-        <span>Manipal University Jaipur</span>
-      </div>
-
-      <div class="project">
-        <strong>BSc Physics (2017)</strong>
-        <span>SRM University – Rank Holder</span>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="card">
-      <h2>Projects</h2>
-      <div class="section-line"></div>
-
-      <p>
-        Explore my work in automation, AI tools, and learning experience design.
+      <p class="role">
+        Technology / Data Analyst
       </p>
 
-      <a href="ppt.html" class="button">View Projects</a>
+      <h1>
+        Hi, I'm <span>Shankary</span>
+      </h1>
+
+      <p class="intro">
+        Technical Analyst with 5+ years of experience supporting enterprise applications,
+        SQL analysis, production support, automation, and reporting solutions.
+        Passionate about solving business problems through technology, data insights,
+        and process optimization.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="ppt.html" class="primary-btn">
+          View Projects
+        </a>
+
+        <a
+          href="data/Geetu_Resume_LD.pdf"
+          target="_blank"
+          class="secondary-btn"
+        >
+          Download Resume
+        </a>
+
+      </div>
+
     </div>
 
-  </main>
-</div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact-section">
+
+    <h2>Contact</h2>
+
+    <p>Email: yourmail@email.com</p>
+
+    <p>
+      LinkedIn:
+      <a
+        href="https://linkedin.com/in/yourprofile"
+        target="_blank"
+      >
+        linkedin.com/in/yourprofile
+      </a>
+    </p>
+
+  </section>
 
 </body>
 </html>
