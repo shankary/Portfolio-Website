@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shankary Devi Natarajan | Application Support & Data Professional</title>
+<title>Shankary Devi Natarajan | Technical Analyst & Learning Experience Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 :root {
-  --bg: #f4f5f7;
-  --card: #ffffff;
+  --bg: #f3f4f6;           /* light grey background */
+  --panel: #ffffff;       /* white cards */
   --text: #1f2937;
-  --muted: #6b7280;
-  --accent: #7c3aed;
+  --muted: #4b5563;
+  --accent: #b76e79;      /* soft feminine rose tone */
   --border: #e5e7eb;
-  --title-gradient: linear-gradient(135deg,#ff4d8d,#a855f7);
 }
 
 /* RESET */
@@ -30,7 +29,8 @@ body {
 .topbar {
   position: sticky;
   top: 0;
-  background: var(--card);
+  z-index: 1000;
+  background: var(--panel);
   padding: 18px 50px;
   display: flex;
   justify-content: space-between;
@@ -38,24 +38,42 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+.welcome {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
 .top-button {
-  background: var(--accent);
+  background: #111;
   color: white;
-  padding: 10px 18px;
+  padding: 10px 20px;
   border-radius: 999px;
+  font-size: 14px;
   text-decoration: none;
+  transition: 0.2s ease;
 }
 
 .top-button.secondary {
   background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  color: #111;
+  border: 1px solid #111;
 }
 
-/* GRID */
+.top-button:hover {
+  transform: scale(1.03);
+}
+
+/* MAIN LAYOUT */
 .main {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: 360px 1fr;
+  min-height: 100vh;
 }
 
 /* LEFT */
@@ -65,11 +83,11 @@ body {
 }
 
 .sidebar-card {
-  background: var(--card);
-  padding: 18px;
+  background: var(--panel);
   border-radius: 16px;
-  margin-bottom: 18px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
 .left img {
@@ -77,65 +95,79 @@ body {
   border-radius: 12px;
 }
 
-/* NAME */
 .left h1 {
-  font-size: 26px;
-  font-weight: 800;
-  background: var(--title-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 22px;
+  margin-top: 10px;
 }
 
-/* ROLE TEXT */
 .left p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.personality {
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
   color: var(--muted);
 }
 
 /* RIGHT */
 .right {
-  padding: 40px;
+  padding: 40px 60px;
 }
 
-/* CARDS */
 .card {
-  background: var(--card);
-  padding: 28px;
+  background: var(--panel);
   border-radius: 18px;
-  margin-bottom: 22px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  padding: 28px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.05);
 }
 
-/* PROJECT BLOCKS */
+h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.section-line {
+  width: 50px;
+  height: 3px;
+  background: #111;
+  margin-bottom: 18px;
+  border-radius: 4px;
+}
+
 .project {
-  border-left: 3px solid var(--accent);
+  border-left: 3px solid #111;
   padding-left: 14px;
   margin-bottom: 14px;
 }
 
 .project strong {
   display: block;
-  margin-bottom: 4px;
+  font-size: 15px;
 }
 
-/* BUTTON */
+.project span {
+  font-size: 14px;
+  color: var(--muted);
+}
+
 .button {
   display: inline-block;
   margin-top: 15px;
-  padding: 12px 22px;
-  background: var(--accent);
+  background: #111;
   color: white;
+  padding: 10px 22px;
   border-radius: 999px;
   text-decoration: none;
-}
-
-/* MUTED */
-.muted {
-  color: var(--muted);
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .main { grid-template-columns: 1fr; }
+  .right { padding: 25px; }
   .left { border-right: none; border-bottom: 1px solid var(--border); }
 }
 </style>
@@ -144,112 +176,123 @@ body {
 <body>
 
 <header class="topbar">
-  <div class="muted">Application Support • Data • Automation • IT Operations</div>
-  <nav>
+  <span class="welcome">Hi, welcome to my portfolio</span>
+
+  <nav class="topbar-right">
     <a href="ppt.html" class="top-button secondary">Projects</a>
-    <a href="data/Geetu_Resume_LD.pdf" class="top-button">Resume</a>
+    <a href="data/Geetu_Resume_LD.pdf" class="top-button" target="_blank">Resume</a>
   </nav>
 </header>
 
 <div class="main">
 
-<!-- LEFT -->
-<aside class="left">
+  <!-- LEFT -->
+  <aside class="left">
 
-  <div class="sidebar-card">
-    <img src="data/GeetuPic.jpg" alt="Profile Photo">
-  </div>
-
-  <div class="sidebar-card">
-    <h1>Shankary Devi Natarajan</h1>
-    <p>
-      Application Support Analyst<br>
-      Data & Automation Professional
-    </p>
-  </div>
-
-  <div class="sidebar-card">
-    <p>
-      5+ years of experience in enterprise application support (.NET, SaaS, COTS),
-      incident management, SQL troubleshooting, and ITIL-based operations supporting 1000+ users.
-    </p>
-  </div>
-
-</aside>
-
-<!-- RIGHT -->
-<main class="right">
-
-  <div class="card">
-    <h2>Professional Summary</h2>
-    <p class="muted">
-      Application Support and IT Operations professional with strong experience in incident resolution,
-      SQL debugging, production support, and enterprise system stability across large-scale environments.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>Experience</h2>
-
-    <div class="project">
-      <strong>Infosys — Technology Analyst (2017–2023)</strong>
-      <span class="muted">
-        Supported enterprise .NET, SaaS, and COTS applications; resolved 50+ incidents monthly;
-        performed SQL analysis, deployment support, and system debugging.
-      </span>
+    <div class="sidebar-card">
+      <img src="data/GeetuPic.jpg" alt="Profile Photo">
+      <h1>Shankary Devi Natarajan</h1>
+      <p>Technical Analyst | Learning Experience Designer | Data & Automation Specialist</p>
     </div>
 
-    <div class="project">
-      <strong>Leadership & Operations</strong>
-      <span class="muted">
-        Managed 12+ applications and led a team of 5 ensuring SLA compliance, uptime, and operational stability.
-      </span>
+    <div class="sidebar-card">
+      <p>
+        5+ years of experience supporting enterprise .NET applications, SaaS platforms, and COTS systems.
+        Skilled in incident resolution, SQL analysis, automation, and technical documentation across large-scale environments.
+      </p>
     </div>
 
-    <div class="project">
-      <strong>Incident & RCA Management</strong>
-      <span class="muted">
-        Created RCA reports, trend analysis, and stakeholder presentations to reduce recurring production issues.
-      </span>
+  </aside>
+
+  <!-- RIGHT -->
+  <main class="right">
+
+    <!-- SUMMARY -->
+    <div class="card">
+      <h2>Professional Summary</h2>
+      <div class="section-line"></div>
+      <p>
+        Experienced in supporting enterprise applications serving 1,000+ users, resolving 50+ monthly incidents,
+        and improving system reliability through RCA, SQL analysis, and production debugging.
+      </p>
+      <br>
+      <p>
+        Strong background in IT operations, automation, and reporting with exposure to Python, SQL, ServiceNow,
+        and enterprise monitoring tools.
+      </p>
     </div>
 
-  </div>
+    <!-- EXPERIENCE -->
+    <div class="card">
+      <h2>Experience</h2>
+      <div class="section-line"></div>
 
-  <div class="card">
-    <h2>Technical Skills</h2>
-    <p class="muted">
-      SQL • Python • C# • .NET • ServiceNow • Dynatrace • ITIL • Agile • IBM Cognos • Azure AI • SSMS
-    </p>
-  </div>
+      <div class="project">
+        <strong>Technology Analyst – Infosys (2017–2023)</strong>
+        <span>Supported .NET enterprise applications, performed SQL reporting, managed production incidents, and led application upgrades and migrations.</span>
+      </div>
 
-  <div class="card">
-    <h2>Education & Certifications</h2>
-    <p class="muted">
-      MCA – Manipal University Jaipur<br>
-      IBM Data Analyst Certificate<br>
-      Microsoft Azure AI-900<br>
-      NPower Canada – Junior Data Analyst Program
-    </p>
-  </div>
+      <div class="project">
+        <strong>Incident & Problem Management</strong>
+        <span>Resolved recurring production issues using logs, SQL validation, and debugging techniques (DLL analysis).</span>
+      </div>
 
-  <div class="card">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <strong>AI IT Support Assistant</strong>
-      <span class="muted">Python + NLP based assistant integrated with SQL for automated troubleshooting.</span>
+      <div class="project">
+        <strong>Operations & Compliance</strong>
+        <span>Managed ServiceNow change requests, security updates, audits, and IT controls ensuring compliance and system stability.</span>
+      </div>
     </div>
 
-    <div class="project">
-      <strong>Power BI Analytics Dashboard</strong>
-      <span class="muted">Analyzed 15,000+ records and created interactive reporting dashboards.</span>
+    <!-- SKILLS -->
+    <div class="card">
+      <h2>Skills</h2>
+      <div class="section-line"></div>
+
+      <div class="project">
+        <strong>Languages</strong>
+        <span>SQL, Python, C#, HTML, CSS</span>
+      </div>
+
+      <div class="project">
+        <strong>Tools</strong>
+        <span>ServiceNow, Dynatrace, Visual Studio, SSMS, Jupyter Notebook</span>
+      </div>
+
+      <div class="project">
+        <strong>Frameworks</strong>
+        <span>ITIL, Agile, Scrum, Kanban</span>
+      </div>
     </div>
 
-    <a href="ppt.html" class="button">View Full Portfolio</a>
-  </div>
+    <!-- EDUCATION -->
+    <div class="card">
+      <h2>Education</h2>
+      <div class="section-line"></div>
 
-</main>
+      <div class="project">
+        <strong>Master of Computer Applications (2023)</strong>
+        <span>Manipal University Jaipur</span>
+      </div>
 
+      <div class="project">
+        <strong>BSc Physics (2017)</strong>
+        <span>SRM University – Rank Holder</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="card">
+      <h2>Projects</h2>
+      <div class="section-line"></div>
+
+      <p>
+        Explore my work in automation, AI tools, and learning experience design.
+      </p>
+
+      <a href="ppt.html" class="button">View Projects</a>
+    </div>
+
+  </main>
 </div>
 
 </body>
