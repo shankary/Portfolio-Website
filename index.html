@@ -2,198 +2,362 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shankary Devi Natarajan | Technology & Data Analyst</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Shankary Devi Natarajan</title>
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+/* ================= ROOT DESIGN SYSTEM ================= */
+:root {
+  --bg: #0a192f;
+  --panel: #112240;
+  --panel-2: #0f2238;
+  --text: #ccd6f6;
+  --muted: #8892b0;
+  --accent: #64ffda;
+  --accent-soft: rgba(100,255,218,0.12);
+  --border: rgba(255,255,255,0.08);
+}
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+/* ================= BASE ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ================= TOP NAV ================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10,25,47,0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar span {
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 18px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.topbar a:hover {
+  color: var(--accent);
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 100vh;
+}
+
+/* ================= LEFT ================= */
+.left {
+  padding: 30px;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.profile-card {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.role {
+  color: var(--accent);
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================= RIGHT ================= */
+.right {
+  padding: 50px;
+}
+
+.hero {
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero h2 span {
+  color: var(--accent);
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 650px;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: 999px;
+  text-decoration: none;
+  margin-right: 12px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-soft);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  margin-bottom: 50px;
+}
+
+.section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: var(--accent);
+}
+
+.card {
+  background: var(--panel);
+  padding: 22px;
+  border-radius: 14px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.tag {
+  padding: 10px;
+  background: var(--panel-2);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid var(--border);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    position: relative;
+    height: auto;
+    border-right: none;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .right {
+    padding: 25px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="social">
-
-<a href="https://github.com/YOURUSERNAME" target="_blank">
-<i class="fa-brands fa-github"></i>
-</a>
-
-<a href="https://linkedin.com/in/YOURPROFILE" target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-
-<a href="mailto:shankarydevi2809@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-</a>
-
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Learning Experience Designer • Technical Trainer • Data & Automation</span>
+  <div>
+    <a href="ppt.html">Projects</a>
+    <a href="data/Geetu_Resume_LD.pdf" target="_blank">Resume</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
 </div>
 
-<header>
-<nav>
-<h2>Shankary Devi Natarajan</h2>
+<div class="container">
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
-</header>
+<!-- LEFT SIDEBAR -->
+<aside class="left">
 
-<section class="hero">
+  <div class="profile-card">
+    <img src="data/GeetuPic.jpg" alt="profile">
+    <h1>Shankary Devi Natarajan</h1>
+    <div class="role">Learning Experience Designer</div>
+    <p class="bio">
+      I design structured, outcome-driven learning experiences that simplify complex technical concepts into practical, engaging learning journeys.
+    </p>
+  </div>
 
-<p class="intro">Hi, my name is</p>
-<h1>Shankary Devi Natarajan</h1>
+  <div class="profile-card">
+    <div class="card-title">Focus Areas</div>
+    <p class="bio">
+      Instructional Design • Curriculum Development • Data Analytics • Automation • LMS Management
+    </p>
+  </div>
 
-<h2>Technology Analyst | Application Support | Data Analysis</h2>
+</aside>
 
-<p>
-I specialize in supporting enterprise applications,
-analyzing data using SQL and Python, and solving
-complex system issues.
-</p>
+<!-- RIGHT CONTENT -->
+<main class="right">
 
-<a class="btn" href="#projects">View Projects</a>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>
+      Designing <span>learning experiences</span><br>
+      that build real-world skills.
+    </h2>
 
-<br><br>
+    <p>
+      I specialize in creating structured learning journeys using instructional design frameworks, automation, and data-driven insights to improve learner outcomes.
+    </p>
 
-<a class="btn" href="resume.pdf" download>Download Resume</a>
+    <div class="buttons">
+      <a class="btn" href="ppt.html">View Projects</a>
+      <a class="btn" href="#skills">Skills</a>
+    </div>
+  </section>
 
-</section>
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <h3>Experience Highlights</h3>
 
-<section id="about" data-aos="fade-up">
+    <div class="card">
+      <div class="card-title">Learning Experience Design</div>
+      <p>Designed curriculum and training programs aligned with adult learning principles and real-world technical skills.</p>
+    </div>
 
-<h2>About Me</h2>
+    <div class="card">
+      <div class="card-title">Technical Training</div>
+      <p>Delivered structured training in Python, Data Analytics, and Cloud Fundamentals with measurable outcomes.</p>
+    </div>
 
-<p>
-Technology Analyst with 5+ years of experience supporting
-enterprise .NET applications, SaaS platforms, and COTS solutions.
-</p>
+    <div class="card">
+      <div class="card-title">Automation & Analytics</div>
+      <p>Automated reporting and workflows using Python, SQL, and scripting tools to improve operational efficiency.</p>
+    </div>
+  </section>
 
-</section>
+  <!-- SKILLS -->
+  <section class="section" id="skills">
+    <h3>Skills & Tools</h3>
 
-<section id="experience" data-aos="fade-up">
+    <div class="grid">
+      <div class="tag">Python</div>
+      <div class="tag">SQL</div>
+      <div class="tag">Power BI</div>
+      <div class="tag">Excel</div>
+      <div class="tag">Articulate 360</div>
+      <div class="tag">Camtasia</div>
+      <div class="tag">Jira</div>
+      <div class="tag">ServiceNow</div>
+      <div class="tag">HTML/CSS</div>
+      <div class="tag">Automation</div>
+    </div>
+  </section>
 
-<h2>Experience</h2>
+  <!-- PROJECT PREVIEW -->
+  <section class="section">
+    <h3>Featured Work</h3>
 
-<h3>Technology Analyst — Infosys</h3>
-<p>Oct 2017 – Jul 2023</p>
+    <div class="card">
+      <div class="card-title">Interactive Python Training Module</div>
+      <p>Scenario-based learning module designed to improve applied Python understanding through structured exercises.</p>
+    </div>
 
-<ul>
+    <div class="card">
+      <div class="card-title">AI-900 Mock Assessment System</div>
+      <p>Assessment framework aligned with certification outcomes using structured evaluation design principles.</p>
+    </div>
 
-<li>Supported 12+ enterprise applications serving 1000+ users</li>
+  </section>
 
-<li>Resolved 50+ monthly incidents using log analysis and SQL validation</li>
-
-<li>Generated SQL reports for business stakeholders</li>
-
-<li>Led a team of 5 engineers</li>
-
-</ul>
-
-</section>
-
-<section id="projects" data-aos="fade-up">
-
-<h2>Projects</h2>
-
-<div class="project-card">
-
-<h3>AI Powered IT Support Assistant</h3>
-
-<p>
-Python-based virtual assistant designed to automate
-troubleshooting steps for enterprise application issues.
-Integrated SQL database to retrieve support knowledge.
-</p>
-
-</div>
-
-<div class="project-card">
-
-<h3>Survey Data Analysis</h3>
-
-<p>
-Analyzed survey datasets using SQL Server and built
-queries to extract insights from multi-response data.
-</p>
-
-</div>
-
-<div class="project-card">
-
-<h3>Social Impact Data Analysis</h3>
-
-<p>
-Participated in a datathon analyzing datasets for
-nonprofit organizations to generate actionable insights.
-</p>
+</main>
 
 </div>
-
-</section>
-
-<section id="skills" data-aos="fade-up">
-
-<h2>Skills</h2>
-
-<div class="skills-grid">
-
-<div>SQL</div>
-<div>Python</div>
-<div>C#</div>
-<div>HTML</div>
-<div>CSS</div>
-<div>Pandas</div>
-<div>NumPy</div>
-<div>Matplotlib</div>
-<div>Plotly</div>
-<div>SQL Server</div>
-<div>ServiceNow</div>
-<div>Dynatrace</div>
-
-</div>
-
-</section>
-
-<section id="contact" data-aos="fade-up">
-
-<h2>Contact</h2>
-
-<p>Email: 123@gmail.com</p>
-
-<p>Location: Markham, Ontario</p>
-
-<p>LinkedIn:
-<a href="https://www.linkedin.com/in/shankary-devi-natarajan-/" target="_blank">
-linkedin.com/in/YOURPROFILE
-</a>
-</p>
-
-<p>GitHub:
-<a href="https://github.com/YOURUSERNAME" target="_blank">
-github.com/YOURUSERNAME
-</a>
-</p>
-
-</section>
 
 <footer>
-
-<p>Designed & Built by Shankary Devi Natarajan</p>
-
+  Designed & built by Shankary Devi Natarajan
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script>
-AOS.init();
-</script>
 </body>
 </html>
