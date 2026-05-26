@@ -2,21 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Shankary Devi Natarajan | Technology & Data Analyst</title>
+<title>Shankary Devi Natarajan | Learning Experience Designer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
-/* ================= ROOT DESIGN SYSTEM ================= */
+/* ================= DESIGN SYSTEM (LIGHT THEME) ================= */
 :root {
-  --bg: #0a192f;
-  --panel: #112240;
-  --panel-2: #0f2238;
-  --text: #ccd6f6;
-  --muted: #8892b0;
-  --accent: #64ffda;
-  --accent-soft: rgba(100,255,218,0.12);
-  --border: rgba(255,255,255,0.08);
+  --bg: #f7f8fc;
+  --panel: #ffffff;
+  --panel-2: #f1f5f9;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #7c3aed;
+  --accent-soft: rgba(124,58,237,0.12);
+  --border: #e5e7eb;
 }
 
 /* ================= BASE ================= */
@@ -38,7 +38,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(10,25,47,0.85);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   padding: 18px 50px;
@@ -49,7 +49,7 @@ body {
 
 .topbar span {
   color: var(--accent);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -86,7 +86,7 @@ body {
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .profile-card img {
@@ -116,6 +116,7 @@ h1 {
   padding: 50px;
 }
 
+/* HERO */
 .hero {
   margin-bottom: 50px;
 }
@@ -171,12 +172,13 @@ h1 {
   border-radius: 14px;
   margin-bottom: 15px;
   border: 1px solid var(--border);
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   border-color: var(--accent);
+  box-shadow: 0 10px 25px rgba(124,58,237,0.08);
 }
 
 .card-title {
@@ -203,6 +205,12 @@ h1 {
   text-align: center;
   font-size: 13px;
   border: 1px solid var(--border);
+  transition: 0.2s;
+}
+
+.tag:hover {
+  transform: scale(1.05);
+  border-color: var(--accent);
 }
 
 /* ================= FOOTER ================= */
@@ -256,7 +264,7 @@ footer {
 
 <div class="container">
 
-<!-- LEFT SIDEBAR -->
+<!-- LEFT -->
 <aside class="left">
 
   <div class="profile-card">
@@ -277,10 +285,9 @@ footer {
 
 </aside>
 
-<!-- RIGHT CONTENT -->
+<!-- RIGHT -->
 <main class="right">
 
-  <!-- HERO -->
   <section class="hero">
     <h2>
       Designing <span>learning experiences</span><br>
@@ -288,7 +295,7 @@ footer {
     </h2>
 
     <p>
-      I specialize in creating structured learning journeys using instructional design frameworks, automation, and data-driven insights to improve learner outcomes.
+      I create structured learning journeys using instructional design frameworks, automation, and data-driven insights to improve learner outcomes.
     </p>
 
     <div class="buttons">
@@ -297,13 +304,12 @@ footer {
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
   <section class="section">
     <h3>Experience Highlights</h3>
 
     <div class="card">
       <div class="card-title">Learning Experience Design</div>
-      <p>Designed curriculum and training programs aligned with adult learning principles and real-world technical skills.</p>
+      <p>Designed curriculum and training programs aligned with adult learning principles and real-world skills.</p>
     </div>
 
     <div class="card">
@@ -313,11 +319,10 @@ footer {
 
     <div class="card">
       <div class="card-title">Automation & Analytics</div>
-      <p>Automated reporting and workflows using Python, SQL, and scripting tools to improve operational efficiency.</p>
+      <p>Automated reporting and workflows using Python, SQL, and scripting tools.</p>
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section class="section" id="skills">
     <h3>Skills & Tools</h3>
 
@@ -326,7 +331,7 @@ footer {
       <div class="tag">SQL</div>
       <div class="tag">Power BI</div>
       <div class="tag">Excel</div>
-      <div class="tag">Articulate 360</div>
+      <div class="tag">Articulate</div>
       <div class="tag">Camtasia</div>
       <div class="tag">Jira</div>
       <div class="tag">ServiceNow</div>
@@ -335,18 +340,17 @@ footer {
     </div>
   </section>
 
-  <!-- PROJECT PREVIEW -->
   <section class="section">
     <h3>Featured Work</h3>
 
     <div class="card">
       <div class="card-title">Interactive Python Training Module</div>
-      <p>Scenario-based learning module designed to improve applied Python understanding through structured exercises.</p>
+      <p>Scenario-based learning module designed for applied Python understanding.</p>
     </div>
 
     <div class="card">
       <div class="card-title">AI-900 Mock Assessment System</div>
-      <p>Assessment framework aligned with certification outcomes using structured evaluation design principles.</p>
+      <p>Structured assessment design aligned with certification outcomes.</p>
     </div>
 
   </section>
