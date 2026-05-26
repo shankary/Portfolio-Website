@@ -7,38 +7,41 @@
 
 <style>
 
-/* ================= DESIGN SYSTEM (LIGHT THEME) ================= */
+/* ================= DESIGN SYSTEM ================= */
 :root {
-  --bg: #f7f8fc;
+  --bg: #f3f4f6;              /* light grey base */
   --panel: #ffffff;
-  --panel-2: #f1f5f9;
+  --panel-soft: #f9fafb;
   --text: #1f2937;
   --muted: #6b7280;
-  --accent: #7c3aed;
-  --accent-soft: rgba(124,58,237,0.12);
+  --accent: #6366f1;         /* professional indigo */
+  --accent-2: #22c55e;       /* soft green highlight */
   --border: #e5e7eb;
+
+  /* subtle gradient */
+  --gradient: linear-gradient(135deg, #6366f1, #a855f7);
 }
 
 /* ================= BASE ================= */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
 }
 
-/* ================= TOP NAV ================= */
+/* ================= TOP BAR ================= */
 .topbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.85);
+  background: rgba(243,244,246,0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
   padding: 18px 50px;
@@ -48,9 +51,11 @@ body {
 }
 
 .topbar span {
-  color: var(--accent);
   font-weight: 600;
   font-size: 14px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .topbar a {
@@ -58,7 +63,7 @@ body {
   color: var(--text);
   margin-left: 18px;
   font-size: 14px;
-  transition: 0.3s;
+  transition: 0.25s;
 }
 
 .topbar a:hover {
@@ -86,23 +91,25 @@ body {
   border-radius: 16px;
   padding: 20px;
   margin-bottom: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
 }
 
 .profile-card img {
   width: 100%;
   border-radius: 12px;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
 
 h1 {
   font-size: 26px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
 }
 
 .role {
-  color: var(--accent);
   font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
   margin-bottom: 10px;
 }
 
@@ -116,69 +123,93 @@ h1 {
   padding: 50px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero {
-  margin-bottom: 50px;
+  background: var(--panel);
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
 .hero h2 {
-  font-size: 42px;
+  font-size: 40px;
   line-height: 1.2;
   margin-bottom: 15px;
 }
 
 .hero h2 span {
-  color: var(--accent);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
   color: var(--muted);
-  max-width: 650px;
+  max-width: 700px;
 }
 
 .buttons {
-  margin-top: 25px;
+  margin-top: 22px;
 }
 
 .btn {
   display: inline-block;
   padding: 12px 20px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
   border-radius: 999px;
   text-decoration: none;
   margin-right: 12px;
-  transition: 0.3s;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: 0.25s;
+  background: var(--panel-soft);
 }
 
 .btn:hover {
-  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-2px);
 }
 
 /* ================= SECTIONS ================= */
 .section {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .section h3 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 15px;
-  color: var(--accent);
+  color: var(--text);
+  position: relative;
 }
 
+.section h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: var(--gradient);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 4px;
+}
+
+/* ================= CARDS ================= */
 .card {
   background: var(--panel);
-  padding: 22px;
+  padding: 20px;
   border-radius: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
   border: 1px solid var(--border);
   transition: 0.25s;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 10px 25px rgba(124,58,237,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border-color: #c7d2fe;
 }
 
 .card-title {
@@ -191,7 +222,7 @@ h1 {
   color: var(--muted);
 }
 
-/* ================= GRID ================= */
+/* ================= SKILLS ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -200,7 +231,7 @@ h1 {
 
 .tag {
   padding: 10px;
-  background: var(--panel-2);
+  background: var(--panel);
   border-radius: 10px;
   text-align: center;
   font-size: 13px;
@@ -209,16 +240,16 @@ h1 {
 }
 
 .tag:hover {
-  transform: scale(1.05);
   border-color: var(--accent);
+  transform: scale(1.04);
 }
 
 /* ================= FOOTER ================= */
 footer {
   text-align: center;
   padding: 40px;
-  color: var(--muted);
   font-size: 13px;
+  color: var(--muted);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -233,12 +264,12 @@ footer {
     border-right: none;
   }
 
-  .hero h2 {
-    font-size: 32px;
+  .right {
+    padding: 20px;
   }
 
-  .right {
-    padding: 25px;
+  .hero h2 {
+    font-size: 30px;
   }
 
   .topbar {
@@ -272,7 +303,7 @@ footer {
     <h1>Shankary Devi Natarajan</h1>
     <div class="role">Learning Experience Designer</div>
     <p class="bio">
-      I design structured, outcome-driven learning experiences that simplify complex technical concepts into practical, engaging learning journeys.
+      I design structured, outcome-driven learning experiences that simplify complex technical concepts into practical learning journeys.
     </p>
   </div>
 
@@ -309,17 +340,17 @@ footer {
 
     <div class="card">
       <div class="card-title">Learning Experience Design</div>
-      <p>Designed curriculum and training programs aligned with adult learning principles and real-world skills.</p>
+      <p>Designed curriculum aligned with adult learning principles and industry skills.</p>
     </div>
 
     <div class="card">
       <div class="card-title">Technical Training</div>
-      <p>Delivered structured training in Python, Data Analytics, and Cloud Fundamentals with measurable outcomes.</p>
+      <p>Delivered structured training in Python, Data Analytics, and Cloud Fundamentals.</p>
     </div>
 
     <div class="card">
       <div class="card-title">Automation & Analytics</div>
-      <p>Automated reporting and workflows using Python, SQL, and scripting tools.</p>
+      <p>Built automation workflows using Python, SQL, and scripting tools.</p>
     </div>
   </section>
 
@@ -335,24 +366,7 @@ footer {
       <div class="tag">Camtasia</div>
       <div class="tag">Jira</div>
       <div class="tag">ServiceNow</div>
-      <div class="tag">HTML/CSS</div>
-      <div class="tag">Automation</div>
     </div>
-  </section>
-
-  <section class="section">
-    <h3>Featured Work</h3>
-
-    <div class="card">
-      <div class="card-title">Interactive Python Training Module</div>
-      <p>Scenario-based learning module designed for applied Python understanding.</p>
-    </div>
-
-    <div class="card">
-      <div class="card-title">AI-900 Mock Assessment System</div>
-      <p>Structured assessment design aligned with certification outcomes.</p>
-    </div>
-
   </section>
 
 </main>
