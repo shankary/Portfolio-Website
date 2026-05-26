@@ -687,3 +687,84 @@ body {
   color: #111827;
   margin-top: 8px;
 }
+
+
+/* ================================
+   PROFILE 3-COLUMN SECTION
+================================ */
+
+.profile-section {
+  padding: 100px 60px;
+  background: #fafafa;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* CARD STYLE */
+.profile-card {
+  background: white;
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-6px);
+}
+
+/* HEADINGS */
+.profile-card h3 {
+  font-size: 22px;
+  margin-bottom: 18px;
+  color: #111827;
+}
+
+/* EXPERIENCE TEXT */
+.role-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.company,
+.duration {
+  color: #6b7280;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* LIST STYLE */
+.profile-card ul {
+  margin-top: 15px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.profile-card ul li {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* EDUCATION TITLE */
+.degree {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section {
+    padding: 70px 25px;
+  }
+}
