@@ -437,11 +437,19 @@ body {
 
   }
 
-  .experience-header h1 {
+  .experience-header {
 
-    font-size: 38px;
+  margin-bottom: 60px;
 
-  }
+}
+
+.experience-header h2 {
+
+  font-size: 48px;
+
+  margin-bottom: 18px;
+
+}
 
   .experience-card {
 
