@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Geetu Sodhi | Technical Trainer & Learning Experience Designer</title>
+<title>Shankary Devi Natarajan | Application Support & Data Professional</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 :root {
-  --bg: #f4f5f7;           /* LIGHT GREY BACKGROUND */
-  --panel: #ffffff;        /* WHITE CARDS */
+  --bg: #f4f5f7;
+  --card: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
   --accent: #7c3aed;
   --border: #e5e7eb;
-
   --title-gradient: linear-gradient(135deg,#ff4d8d,#a855f7);
 }
 
@@ -31,60 +30,45 @@ body {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 1000;
-  background: var(--panel);
-  padding: 20px 50px;
+  background: var(--card);
+  padding: 18px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--border);
 }
 
-.topbar-right {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-/* BUTTONS */
 .top-button {
   background: var(--accent);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 18px;
   border-radius: 999px;
   text-decoration: none;
-  font-size: 14px;
-  transition: 0.2s;
-}
-
-.top-button:hover {
-  transform: translateY(-2px);
 }
 
 .top-button.secondary {
   background: transparent;
-  color: var(--accent);
   border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
-/* MAIN GRID */
+/* GRID */
 .main {
   display: grid;
   grid-template-columns: 380px 1fr;
-  min-height: calc(100vh - 80px);
 }
 
-/* LEFT PANEL */
+/* LEFT */
 .left {
   padding: 30px;
   border-right: 1px solid var(--border);
 }
 
 .sidebar-card {
-  background: var(--panel);
-  border-radius: 16px;
+  background: var(--card);
   padding: 18px;
-  margin-bottom: 20px;
+  border-radius: 16px;
+  margin-bottom: 18px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
@@ -96,104 +80,63 @@ body {
 /* NAME */
 .left h1 {
   font-size: 26px;
-  margin-bottom: 5px;
+  font-weight: 800;
+  background: var(--title-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+/* ROLE TEXT */
 .left p {
   color: var(--muted);
 }
 
-/* RIGHT PANEL */
+/* RIGHT */
 .right {
   padding: 40px;
 }
 
 /* CARDS */
 .card {
-  background: var(--panel);
+  background: var(--card);
+  padding: 28px;
   border-radius: 18px;
-  padding: 30px;
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-}
-
-/* HEADINGS */
-h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
 }
 
 /* PROJECT BLOCKS */
 .project {
   border-left: 3px solid var(--accent);
   padding-left: 14px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
+}
+
+.project strong {
+  display: block;
+  margin-bottom: 4px;
 }
 
 /* BUTTON */
 .button {
   display: inline-block;
   margin-top: 15px;
+  padding: 12px 22px;
   background: var(--accent);
   color: white;
-  padding: 12px 24px;
   border-radius: 999px;
   text-decoration: none;
 }
 
-/* QUALIFICATIONS */
-.qualifications summary {
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.qual-block h4 {
-  color: var(--accent);
-}
-
-/* PERSONALITY LINE */
-.personality {
-  text-align: center;
-  margin-top: 30px;
-  font-style: italic;
+/* MUTED */
+.muted {
   color: var(--muted);
-}
-
-/* FEMININE TITLE ONLY */
-.welcome {
-  font-weight: 600;
-}
-
-.animated-welcome {
-  opacity: 0;
-  transform: translateY(-10px);
-  animation: fadeIn 1.5s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* TITLE GRADIENT (ONLY VISUAL POP ELEMENT) */
-.title-gradient {
-  background: var(--title-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .main {
-    grid-template-columns: 1fr;
-  }
-
-  .left {
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
+  .main { grid-template-columns: 1fr; }
+  .left { border-right: none; border-bottom: 1px solid var(--border); }
 }
 </style>
 </head>
@@ -201,11 +144,8 @@ h2 {
 <body>
 
 <header class="topbar">
-  <span class="welcome animated-welcome">
-    🌷 Welcome to my portfolio
-  </span>
-
-  <nav class="topbar-right">
+  <div class="muted">Application Support • Data • Automation • IT Operations</div>
+  <nav>
     <a href="ppt.html" class="top-button secondary">Projects</a>
     <a href="data/Geetu_Resume_LD.pdf" class="top-button">Resume</a>
   </nav>
@@ -213,67 +153,103 @@ h2 {
 
 <div class="main">
 
-  <!-- LEFT -->
-  <aside class="left">
+<!-- LEFT -->
+<aside class="left">
 
-    <div class="sidebar-card">
-      <img src="data/GeetuPic.jpg">
-    </div>
+  <div class="sidebar-card">
+    <img src="data/GeetuPic.jpg" alt="Profile Photo">
+  </div>
 
-    <div class="sidebar-card">
-      <h1 class="title-gradient">Geetu Sodhi</h1>
-      <p>Learning Experience Designer<br>Technical Trainer</p>
-    </div>
-
-    <div class="sidebar-card">
-      <p>
-        I design learning experiences that simplify technical concepts and make them practical for adult learners.
-      </p>
-    </div>
-
-  </aside>
-
-  <!-- RIGHT -->
-  <main class="right">
-
-    <div class="card">
-      <h2>Key Projects</h2>
-
-      <div class="project">
-        <strong>Technical Training Leadership</strong><br>
-        <span>Data Analytics, Cloud & Python programs using LMS platforms.</span>
-      </div>
-
-      <div class="project">
-        <strong>Curriculum Design</strong><br>
-        <span>Structured learning paths using ADDIE & LXD principles.</span>
-      </div>
-
-      <div class="project">
-        <strong>Automation</strong><br>
-        <span>Python & Power Automate workflows reducing manual work.</span>
-      </div>
-
-      <a href="ppt.html" class="button">View Projects</a>
-    </div>
-
-    <div class="card">
-      <h2>Skills & Tools</h2>
-      <p>Instructional Design • Python • SQL • Power BI • Articulate • LMS Systems</p>
-    </div>
-
-    <div class="card">
-      <details class="qualifications">
-        <summary>Qualifications</summary>
-        <p>Masters in Computer Applications + Training Certifications</p>
-      </details>
-    </div>
-
-    <p class="personality">
-      Educator at heart | Problem solver | Learning Experience Designer
+  <div class="sidebar-card">
+    <h1>Shankary Devi Natarajan</h1>
+    <p>
+      Application Support Analyst<br>
+      Data & Automation Professional
     </p>
+  </div>
 
-  </main>
+  <div class="sidebar-card">
+    <p>
+      5+ years of experience in enterprise application support (.NET, SaaS, COTS),
+      incident management, SQL troubleshooting, and ITIL-based operations supporting 1000+ users.
+    </p>
+  </div>
+
+</aside>
+
+<!-- RIGHT -->
+<main class="right">
+
+  <div class="card">
+    <h2>Professional Summary</h2>
+    <p class="muted">
+      Application Support and IT Operations professional with strong experience in incident resolution,
+      SQL debugging, production support, and enterprise system stability across large-scale environments.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Experience</h2>
+
+    <div class="project">
+      <strong>Infosys — Technology Analyst (2017–2023)</strong>
+      <span class="muted">
+        Supported enterprise .NET, SaaS, and COTS applications; resolved 50+ incidents monthly;
+        performed SQL analysis, deployment support, and system debugging.
+      </span>
+    </div>
+
+    <div class="project">
+      <strong>Leadership & Operations</strong>
+      <span class="muted">
+        Managed 12+ applications and led a team of 5 ensuring SLA compliance, uptime, and operational stability.
+      </span>
+    </div>
+
+    <div class="project">
+      <strong>Incident & RCA Management</strong>
+      <span class="muted">
+        Created RCA reports, trend analysis, and stakeholder presentations to reduce recurring production issues.
+      </span>
+    </div>
+
+  </div>
+
+  <div class="card">
+    <h2>Technical Skills</h2>
+    <p class="muted">
+      SQL • Python • C# • .NET • ServiceNow • Dynatrace • ITIL • Agile • IBM Cognos • Azure AI • SSMS
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Education & Certifications</h2>
+    <p class="muted">
+      MCA – Manipal University Jaipur<br>
+      IBM Data Analyst Certificate<br>
+      Microsoft Azure AI-900<br>
+      NPower Canada – Junior Data Analyst Program
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <strong>AI IT Support Assistant</strong>
+      <span class="muted">Python + NLP based assistant integrated with SQL for automated troubleshooting.</span>
+    </div>
+
+    <div class="project">
+      <strong>Power BI Analytics Dashboard</strong>
+      <span class="muted">Analyzed 15,000+ records and created interactive reporting dashboards.</span>
+    </div>
+
+    <a href="ppt.html" class="button">View Full Portfolio</a>
+  </div>
+
+</main>
+
 </div>
 
 </body>
