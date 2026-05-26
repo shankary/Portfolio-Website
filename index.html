@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shankary Devi Natarajan | Learning Experience Designer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* ================= DESIGN SYSTEM ================= */
+:root {
+  --bg: #f3f4f6;              /* light grey base */
+  --panel: #ffffff;
+  --panel-soft: #f9fafb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #6366f1;         /* professional indigo */
+  --accent-2: #22c55e;       /* soft green highlight */
+  --border: #e5e7eb;
+
+  /* subtle gradient */
+  --gradient: linear-gradient(135deg, #6366f1, #a855f7);
+}
+
+/* ================= BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* ================= TOP BAR ================= */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(243,244,246,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar span {
+  font-weight: 600;
+  font-size: 14px;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.topbar a {
+  text-decoration: none;
+  color: var(--text);
+  margin-left: 18px;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.topbar a:hover {
+  color: var(--accent);
+}
+
+/* ================= LAYOUT ================= */
+.container {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  min-height: 100vh;
+}
+
+/* ================= LEFT ================= */
+.left {
+  padding: 30px;
+  border-right: 1px solid var(--border);
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+}
+
+.profile-card {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+}
+
+.role {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.bio {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================= RIGHT ================= */
+.right {
+  padding: 50px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: var(--panel);
+  padding: 40px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+  font-size: 40px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero h2 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 700px;
+}
+
+.buttons {
+  margin-top: 22px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: 0.25s;
+  background: var(--panel-soft);
+}
+
+.btn:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  margin-bottom: 45px;
+}
+
+.section h3 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: var(--text);
+  position: relative;
+}
+
+.section h3::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: var(--gradient);
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 4px;
+}
+
+/* ================= CARDS ================= */
+.card {
+  background: var(--panel);
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  border: 1px solid var(--border);
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border-color: #c7d2fe;
+}
+
+.card-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* ================= SKILLS ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.tag {
+  padding: 10px;
+  background: var(--panel);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  transition: 0.2s;
+}
+
+.tag:hover {
+  border-color: var(--accent);
+  transform: scale(1.04);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .left {
+    position: relative;
+    height: auto;
+    border-right: none;
+  }
+
+  .right {
+    padding: 20px;
+  }
+
+  .hero h2 {
+    font-size: 30px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <span>Learning Experience Designer • Technical Trainer • Data & Automation</span>
+  <div>
+    <a href="ppt.html">Projects</a>
+    <a href="data/Geetu_Resume_LD.pdf" target="_blank">Resume</a>
+    <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- LEFT -->
+<aside class="left">
+
+  <div class="profile-card">
+    <img src="data/GeetuPic.jpg" alt="profile">
+    <h1>Shankary Devi Natarajan</h1>
+    <div class="role">Learning Experience Designer</div>
+    <p class="bio">
+      I design structured, outcome-driven learning experiences that simplify complex technical concepts into practical learning journeys.
+    </p>
+  </div>
+
+  <div class="profile-card">
+    <div class="card-title">Focus Areas</div>
+    <p class="bio">
+      Instructional Design • Curriculum Development • Data Analytics • Automation • LMS Management
+    </p>
+  </div>
+
+</aside>
+
+<!-- RIGHT -->
+<main class="right">
+
+  <section class="hero">
+    <h2>
+      Designing <span>learning experiences</span><br>
+      that build real-world skills.
+    </h2>
+
+    <p>
+      I create structured learning journeys using instructional design frameworks, automation, and data-driven insights to improve learner outcomes.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="ppt.html">View Projects</a>
+      <a class="btn" href="#skills">Skills</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Experience Highlights</h3>
+
+    <div class="card">
+      <div class="card-title">Learning Experience Design</div>
+      <p>Designed curriculum aligned with adult learning principles and industry skills.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Technical Training</div>
+      <p>Delivered structured training in Python, Data Analytics, and Cloud Fundamentals.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-title">Automation & Analytics</div>
+      <p>Built automation workflows using Python, SQL, and scripting tools.</p>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h3>Skills & Tools</h3>
+
+    <div class="grid">
+      <div class="tag">Python</div>
+      <div class="tag">SQL</div>
+      <div class="tag">Power BI</div>
+      <div class="tag">Excel</div>
+      <div class="tag">Articulate</div>
+      <div class="tag">Camtasia</div>
+      <div class="tag">Jira</div>
+      <div class="tag">ServiceNow</div>
+    </div>
+  </section>
+
+</main>
+
+</div>
+
+<footer>
+  Designed & built by Shankary Devi Natarajan
+</footer>
+
+</body>
+</html>
