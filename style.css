@@ -382,3 +382,76 @@ body {
   }
 
 }
+
+
+/* EXPERIENCE PAGE */
+
+}
+
+.company {
+
+  color: var(--muted);
+
+  font-size: 17px;
+
+}
+
+.experience-date {
+
+  color: var(--muted);
+
+  font-weight: 600;
+
+}
+
+.experience-list {
+
+  padding-left: 22px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+
+}
+
+.experience-list li {
+
+  color: #374151;
+
+  line-height: 1.9;
+
+  font-size: 16px;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .experience-page {
+
+    padding: 70px 25px;
+
+  }
+
+  .experience-header h1 {
+
+    font-size: 38px;
+
+  }
+
+  .experience-card {
+
+    padding: 28px;
+
+  }
+
+  .experience-top h2 {
+
+    font-size: 24px;
+
+  }
+
+}
