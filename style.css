@@ -677,3 +677,13 @@ body {
     padding: 70px 25px;
   }
 }
+
+/* UNIFIED SECTION TITLE STYLE (Skills + Experience + Contact) */
+
+.section-title {
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  color: #111827;
+  margin-top: 8px;
+}
