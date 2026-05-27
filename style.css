@@ -432,3 +432,12 @@ body::before {
 .cert-item:hover {
   transform: translateX(4px);
 }
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--muted);
+  font-size: 14px;
+  border-top: 1px solid var(--border);
+  margin-top: 60px;
+  background: transparent;
+}
