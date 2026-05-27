@@ -196,6 +196,9 @@ body::before {
   box-shadow: var(--shadow-sm);
   transition: all 0.35s ease;
   overflow: hidden;
+
+  /* ✅ ADD THIS (FIXES YOUR ISSUE) */
+  padding: 28px 28px 24px;
 }
 
 .profile-card:hover,
