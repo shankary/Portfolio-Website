@@ -419,31 +419,6 @@ body {
 }
 /* CONTACT */
 
-.contact-section {
-  padding: 80px 60px;
-
-  background: white;
-
-  border-top: 1px solid #e5e7eb;
-}
-
-.contact-section .section-title {
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  margin-bottom: 12px;
-  color: var(--muted);
-}
-
-.contact-section a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.contact-section a:hover {
-  text-decoration: underline;
-}
 
 /* RESPONSIVE */
 
@@ -497,6 +472,9 @@ body {
   .skills-section,
   .contact-section {
     padding: 70px 25px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .section-title {
@@ -571,8 +549,4 @@ body {
   text-decoration: underline;
 }
 
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-}
+
