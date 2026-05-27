@@ -207,6 +207,7 @@ body::before {
   flex-direction: column;
   align-items: center;  /* centers horizontally */
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .profile-card:hover,
@@ -217,6 +218,10 @@ body::before {
   transform: translateY(-10px) scale(1.01);
   box-shadow: var(--shadow-lg);
   border-color: rgba(183, 110, 121, 0.35);
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
 }
 
 /* TIMELINE */
