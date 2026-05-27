@@ -202,11 +202,11 @@ body::before {
 }
 
 .contact-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: 64px 1fr;
   align-items: center;
   gap: 16px;
-  text-align: center;
-  justify-content: flex-start;
+  text-align: left;
 }
 
 .profile-card:hover,
@@ -232,7 +232,7 @@ body::before {
   display: block;
   margin-top: 4px;
   color: var(--accent);
-  font-weight: 600;
+  font-size: 14px;
 
   /* prevents overflow issues */
   word-break: break-word;
@@ -331,7 +331,6 @@ body::before {
   justify-content: center;
   background: #f3f6fb;
   border-radius: 18px;
-  flex-shrink: 0;
 }
 
 .contact-icon img {
