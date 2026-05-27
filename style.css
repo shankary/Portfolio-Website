@@ -288,9 +288,8 @@ body {
 .skills-category-card {
   background: white;
 
-  border-radius: 28px;
-
-  padding: 30px;
+  padding: 18px;   /* reduced from 30px */
+  border-radius: 18px;
 
   border: 1px solid #edf0f3;
 
@@ -381,23 +380,21 @@ body {
 .skills-icons-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
+  gap: 10px;   /* reduced from 18px */
 }
 
 /* SKILL BOX */
 
 .skill-box {
-  background: #fcfcfc;
+  background: #eef3f8;
+  border: 1px solid #dbe3ee;
 
-  border: 1px solid #edf0f3;
+  border-radius: 14px;
 
-  border-radius: 22px;
-
-  padding: 20px 14px;
-
+  padding: 12px 10px;   /* reduced from 20px */
   text-align: center;
 
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .skill-box:hover {
@@ -412,12 +409,10 @@ body {
 }
 
 .skill-box p {
-  font-size: 18px;
+  font-size: 13px;   /* smaller + professional */
   font-weight: 600;
-
   color: #111827;
 }
-
 /* CONTACT */
 
 .contact-section {
@@ -510,6 +505,7 @@ body {
 
 }
 .skill-icon {
-  font-size: 42px;
-  margin-bottom: 12px;
+  width: 28px;   /* reduced from ~40px */
+  height: 28px;
+  margin-bottom: 8px;
 }
