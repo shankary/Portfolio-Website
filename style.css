@@ -173,7 +173,10 @@ body {
 }
 
 .hero-content h1 span {
-  color: var(--accent);
+  background: linear-gradient(90deg, #c08497, #e7c6c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 .intro {
