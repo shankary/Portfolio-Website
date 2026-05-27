@@ -318,8 +318,11 @@ body {
 }
 
 .contact-icon {
-  font-size: 34px;
-  margin-bottom: 12px;
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 14px auto;
 }
 
 .contact-card h3 {
